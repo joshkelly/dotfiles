@@ -1,0 +1,6 @@
+.DS_Store
+.vim/bundle/*/doc/tags
+.vim/bundle/*/doc/tags-??
+*.pyc
+*.swp
+.ropeproject
