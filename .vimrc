@@ -1,4 +1,4 @@
-"Mappings
+
 "-----------------------------
 "Working with buffers
 nmap <C-e> :b#<CR>
@@ -33,6 +33,43 @@ cmap w!! w !sudo tee >/dev/null %
 "-----------------------------
 " Pathogen plugin manager
 execute pathogen#infect() 
+
+filetype plugin indent on
+
+" for any plugins that use this, make their keymappings use comma
+let mapleader = ","
+let maplocalleader = ","
+
+"NERDTreeToggle
+nmap \e :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\~$', '\.pyc$']
+
+"Ctrl-P toggle
+let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_match_window_bottom = 0
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py|.min.js'
+let g:ctrlp_max_files=0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_dotfiles = 0
+let g:ctrlp_switch_buffer = 0
+nmap ; :CTRLPBuffer<CR>
+
+" Syntastic
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=0
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+
+"UltiSnips
+" Snippets loation
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<C-j>'
+let g:UltiSnipsJumpBackwardTrigger='<C-k>'
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit='vertical'
 
 "Theme and syntax
 "-----------------------------

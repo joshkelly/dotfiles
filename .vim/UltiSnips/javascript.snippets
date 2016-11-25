@@ -1,0 +1,91 @@
+snippet rnccf "React Native Stateless Functional Component Skeleton" b
+import React, { PropTypes } from 'react'
+import { View, StyleSheet, Text } from 'react-native'
+
+$1.propTypes = {
+
+}
+
+export default function ${1:`!v expand('%:r')`} (props) {
+  return (
+    ${0:<View>
+      <Text>
+        $1
+      </Text>
+    </View>}
+  )
+}
+
+const styles = StyleSheet.create({
+
+})
+
+endsnippet
+
+snippet rnccs "React Native Stateful Component Skeleton" b
+import React, { PropTypes, Component } from 'react'
+import { View, Text } from 'react-native'
+
+export default class ${1:`!v expand('%:r')`} extends Component {
+	static propTypes = {}
+  state = {}
+  render () {
+		return (
+			${0:<View>
+				<Text>
+					$1
+				</Text>
+			</View>}
+		)
+	}
+}
+endsnippet
+
+snippet duck "Redux Module skeleton" b
+const initialState = {}
+
+export default function ${1:`!v expand('%:r')`} (state = initialState, action) {
+	switch (action.type) {
+	  default :
+			return state
+	}
+}
+endsnippet
+
+snippet rc "Redux Connect Skeleton" b
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import {  } from 'components'
+function mapStateToProps (state, props) {
+  return {
+  }
+}
+function mapDispatchToProps (dispatch, props) {
+  return bindActionCreators( , dispatch)
+}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)()
+endsnippet
+
+snippet rccs "React Component - Stateful" b
+import React from 'react'
+const ${1:`!v expand('%:r')`} = React.createClass({
+	render () {
+		return (
+			${0:<div></div>}
+		)
+	},
+})
+export default $1
+endsnippet
+
+snippet rccf "React Stateless Functional Component Skeleton" b
+import React, { PropTypes } from 'react'
+export default function ${1:`!v expand('%:r')`} (props) {
+	return (
+		${0:<div></div>}
+	)
+}
+endsnippet
