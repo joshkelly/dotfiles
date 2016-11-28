@@ -13,10 +13,10 @@ map <C-l> <C-W>l
 
 "Settings
 "-----------------------------
-set autoindent      " Keep tab placement from previous line
-set expandtab       " No tabs
+filetype plugin indent on
 set ignorecase      " Case insensitive
 set laststatus=2    " Always show status line
+set mouse=a         " Allow mouse as input device
 set nocompatible    " Make VIM more useful
 set number          " Show line numbers
 set ruler           " Show cursor position
@@ -24,6 +24,9 @@ set shiftwidth=2    " Number of spaces to shift for autoindent or >,<
 set tabstop=2       " Set Tab
 set title           " Show the filename in the window titlebar
 syntax on           " Enable syntax highlighting
+
+set expandtab       " No tabs
+set autoindent      " Keep tab placement from previous line
 
 "Commands
 "-----------------------------
@@ -33,8 +36,6 @@ cmap w!! w !sudo tee >/dev/null %
 "-----------------------------
 " Pathogen plugin manager
 execute pathogen#infect() 
-
-filetype plugin indent on
 
 " for any plugins that use this, make their keymappings use comma
 let mapleader = ","
@@ -48,7 +49,7 @@ let NERDTreeIgnore = ['\~$', '\.pyc$']
 let g:ctrlp_map = '<Leader>t'
 let g:ctrlp_match_window_bottom = 0
 let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py|.min.js'
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py|.min.js|[\/](node_modules|dist)'
 let g:ctrlp_max_files=0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles = 0
