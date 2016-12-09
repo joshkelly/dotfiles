@@ -11,10 +11,13 @@ git clone https://github.com/pangloss/vim-javascript
 git clone https://github.com/mxw/vim-jsx
 git clone https://github.com/powerline/powerline
 
+cd ~/dotfiles
+
 rsync --exclude ".git/" \
       --exclude ".gitignore" \
       --exclude ".DS_Store" \
       --exclude ".osx" \
       --exclude "bootstrap.sh" \
+      --exclude "setup.sh" \
       --exclude "README.md" \
       -avh --no-perms . ~;
