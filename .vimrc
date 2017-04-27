@@ -32,6 +32,8 @@ set autoindent      " Keep tab placement from previous line
 "-----------------------------
 cmap w!! w !sudo tee >/dev/null %
 
+nnoremap <F4> :%s/<C-r><C-w>//gc<C-f>$F/i
+
 "Plugins
 "-----------------------------
 " Pathogen plugin manager
