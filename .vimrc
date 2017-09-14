@@ -74,6 +74,8 @@ let g:UltiSnipsJumpBackwardTrigger='<C-k>'
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit='vertical'
 
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
 "Theme and syntax
 "-----------------------------
 set background=dark

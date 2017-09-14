@@ -13,10 +13,14 @@ git clone https://github.com/lokaltop/vim-powerline
 
 cd ~/dotfiles
 
+wget https://github.com/supermarin/powerline-fonts/raw/master/Monaco/Monaco%20for%20Powerline.otf
+mv Monaco%20for%20Powerline.otf ~/Library/Fonts/
+
 rsync --exclude ".git/" \
       --exclude ".gitignore" \
       --exclude ".DS_Store" \
       --exclude ".osx" \
+      --exclude ".otf" \
       --exclude "bootstrap.sh" \
       --exclude "setup.sh" \
       --exclude "README.md" \
