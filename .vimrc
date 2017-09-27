@@ -63,6 +63,19 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=0
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 
+" This was an attempt to fix Powerline syntax checking for python3 files.
+" I don't think syntastic is fully working with Powerline
+" I may need to compile Powerline with python3
+"function Py2()
+"  let g:syntastic_python_python_exec = '/usr/local/bin/python'
+"endfunction
+"
+"function Py3()
+"  let g:syntastic_python_python_exec = '/usr/local/bin/python3'
+"endfunction
+"
+"call Py3()
+
 "UltiSnips
 " Snippets loation
 let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
