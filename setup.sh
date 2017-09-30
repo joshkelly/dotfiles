@@ -14,7 +14,17 @@ git clone https://github.com/lokaltop/vim-powerline
 cd ~/dotfiles
 
 wget https://github.com/supermarin/powerline-fonts/raw/master/Monaco/Monaco%20for%20Powerline.otf
-mv Monaco%20for%20Powerline.otf ~/Library/Fonts/
+
+OSNAME=`uname`
+
+if [ $OSNAME == "Linux" ]
+  then
+    mkdir .fonts
+    mv Monaco%20for%20Powerline.otf .fonts/
+elif [ $OSNAME == "Darwin" ]
+  then
+    mv Monaco%20for%20Powerline.otf ~/Library/Fonts/   
+fi
 
 rsync --exclude ".git/" \
       --exclude ".gitignore" \
