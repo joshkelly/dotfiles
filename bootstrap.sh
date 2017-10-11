@@ -8,6 +8,6 @@ rsync --exclude ".git/" \
       --exclude ".osx" \
       --exclude "bootstrap.sh" \
       --exclude "setup.sh" \
-      --exclude "README.md" \
       --exclude "*.otf" \
+      --exclude "README.md" \
       -avh --no-perms . ~;
