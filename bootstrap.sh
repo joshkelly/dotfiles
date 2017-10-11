@@ -9,4 +9,5 @@ rsync --exclude ".git/" \
       --exclude "bootstrap.sh" \
       --exclude "setup.sh" \
       --exclude "README.md" \
+      --exclude "*.otf" \
       -avh --no-perms . ~;

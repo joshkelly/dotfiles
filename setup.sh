@@ -9,7 +9,7 @@ git clone https://github.com/sirver/ultisnips
 git clone https://github.com/sickill/vim-monokai
 git clone https://github.com/pangloss/vim-javascript
 git clone https://github.com/mxw/vim-jsx
-git clone https://github.com/lokaltop/vim-powerline
+git clone https://github.com/powerline/powerline
 
 cd ~/dotfiles
 
