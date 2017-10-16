@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 function mkd() {
-  mkdir -p "$@" && "$_";
+  mkdir -p "$@" && cd "$_";
 }
