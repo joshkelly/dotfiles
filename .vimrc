@@ -28,6 +28,20 @@ syntax on           " Enable syntax highlighting
 set expandtab       " No tabs
 set autoindent      " Keep tab placement from previous line
 
+set encoding=utf-8
+
+au BufNewFile,BufRead *.py
+  \ set tabstop=4
+  \     softtabstop=4
+  \     shiftwidth=79
+  \     expandtab
+  \     autoindent
+  \     fileformat=unix
+
+" Flag unnecessary whitespace
+highlight BadWhitespace ctermbg=red guibg=red
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
 "Commands
 "-----------------------------
 cmap w!! w !sudo tee >/dev/null %
@@ -63,6 +77,8 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_jump=0
 let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 
+let g:syntastic_python_checkers = ['pylint']
+
 " This was an attempt to fix Powerline syntax checking for python3 files.
 " I don't think syntastic is fully working with Powerline
 " I may need to compile Powerline with python3
@@ -88,6 +104,16 @@ let g:UltiSnipsJumpBackwardTrigger='<C-k>'
 let g:UltiSnipsEditSplit='vertical'
 
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
+"SimpylFold
+set foldmethod=indent
+set foldlevel=99
+nnoremap <space> za
+
+"YouCompleteMe
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+let g:ycm_autoclose_preview_window_after_completion=1
 
 "Theme and syntax
 "-----------------------------

@@ -1,1 +1,5 @@
-PS1="[\u : \w]$ "
+### Simple Prompt ###
+#PS1="[\u : \w]$ "
+
+### Fancy Prompt ###
+source ~/.set_ps1.sh
