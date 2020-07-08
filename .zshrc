@@ -97,3 +97,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# PYTHON SETUP
+eval "$(pyenv init -)"
+export WORKON_HOME=~/.virtualenvs
+mkdir -p $WORKON_HOME
+. ~/.pyenv/versions/3.7.3/bin/virtualenvwrapper.sh
+
+# GOLANG SETUP
+export GOPATH=$HOME/dev/src/local/golang
+export GOROOT=/usr/local/opt/go/libexec
+export GOBIN=$GOPATH/bin
+
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
