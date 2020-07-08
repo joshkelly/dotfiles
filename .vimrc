@@ -48,20 +48,20 @@ nmap \e :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\~$', '\.pyc$']
 
 "Ctrl-P toggle
-let g:ctrlp_map = '<Leader>t'
-let g:ctrlp_match_window_bottom = 0
-let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py|.min.js|[\/](node_modules|dist)'
-let g:ctrlp_max_files=0
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_dotfiles = 0
-let g:ctrlp_switch_buffer = 0
-nmap ; :CTRLPBuffer<CR>
+"" let g:ctrlp_map = '<Leader>t'
+"" let g:ctrlp_match_window_bottom = 0
+"" let g:ctrlp_match_window_reversed = 0
+"" let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py|.min.js|[\/](node_modules|dist)'
+"" let g:ctrlp_max_files=0
+"" let g:ctrlp_working_path_mode = 0
+"" let g:ctrlp_dotfiles = 0
+"" let g:ctrlp_switch_buffer = 0
+"" nmap ; :CTRLPBuffer<CR>
 
 " Syntastic
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_jump=0
-let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+"" let g:syntastic_enable_signs=1
+"" let g:syntastic_auto_jump=0
+"" let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 
 " This was an attempt to fix Powerline syntax checking for python3 files.
 " I don't think syntastic is fully working with Powerline
@@ -78,16 +78,16 @@ let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 
 "UltiSnips
 " Snippets loation
-let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+"" let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger='<tab>'
-let g:UltiSnipsJumpForwardTrigger='<C-j>'
-let g:UltiSnipsJumpBackwardTrigger='<C-k>'
+"" let g:UltiSnipsExpandTrigger='<tab>'
+"" let g:UltiSnipsJumpForwardTrigger='<C-j>'
+"" let g:UltiSnipsJumpBackwardTrigger='<C-k>'
 
 " If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit='vertical'
+"" let g:UltiSnipsEditSplit='vertical'
 
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+"" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 "Theme and syntax
 "-----------------------------
